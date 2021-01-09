@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1em;
+  font-family: 'PT Sans', sans-serif;
+  color: #fff;
+  background-color: #595959;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+/*This div keeps the width of content in other divs at 90%*/
+.container {  
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+/*HEADER AND NAVIGATION*/
+
+header {
+  padding: 15px 0 15px 0;     /* upper and lower padding in header*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.page-title {
+  font-size: 1.15em;
+  font-family: 'Ubuntu', sans-serif;    /* The font on the title is different than the rest of the page*/
+  padding: 20px 0 20px 0;
+}
+
+.page-title h2 span {
+  color: #ff6600;
+}
+
+.page-title,  nav {
+  width: 100%;          /* 100% width makes it so they take their individual lines*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;   /*If both divs can fit on the same line they will with this*/
+}
+
+nav ul a {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav ul a li {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  list-style-type: none;
+}
+
+nav ul li:hover, nav ul li span:hover {
+  color: #8c8c8c;         /* On mouse over, the text changes color */
+}
+
+nav ul li span {
+  color: #ff6600;
+}
+
+/*HERO AREA*/
+
+.hero-area {
+  border-top: 3px solid #ff6600;
+  padding: 50px 0 170px 0;
+  /*This line of code darkens the picture so font is visible. 3 numbers color and last one opacity*/
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/office.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-area h1, .hero-area p {
+  width: 100%;
+  text-align: center;
+}
+
+.hero-area h1 {
+  font-size: 3em;       /* font size is 48px*/
+  line-height: 1.5em;
+  padding-bottom: 20px;
+}
+
+.hero-area p {
+  font-size: 1.25em;
+}
+
+/* FORM */
+
+.form {
+  width: 100%;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+/*both divs have same features so are on different lines. But can be manipulated to be side by side*/
+.form-title, .form-contents {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.form h3 {
+  font-size: 1.5em;
+  width: 100%;
+  padding-bottom: 15px;
+  text-align: center; 
+}
+
+input[type=text] {          /*Can manupulate input code like this*/
+  width: 100%;
+  padding: 10px 10px 10px 5px;
+}
+
+input[type=button] {
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  border: none;
+  background-color: #ff6600;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+/* SERVICES */
+
+.services {
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.services h3, .services p {
+  padding-bottom: 20px;
+}
+
+.section-one, .section-two, .section-three {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.section-one i {
+  font-size: 8em;
+  color: #ff6600;     /*background color for icon*/
+}
+
+.section-two i {
+  font-size: 8em;
+  color: #00aaff;
+}
+
+.section-three i {
+  font-size: 8em;
+  color: #737373;
+}
+
+/* FOOTER */
+
+footer {
+  width: 100%;
+  background-color: #ff6600;
+  padding: 25px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/**************************** TABLET & DESKTOP STYLES *****************************/
+
+@media (min-width: 768px) {
+
+/* HEADER */
+
+header {
+  width: 100%;
+}
+
+.page-title, nav {
+  width: 50%;         /*at 50% with row wrap, these divs will be side by side for tablet and desktop*/
+}
+
+.page-title {
+  justify-content: flex-start;    /*left align the page title*/
+}
+
+nav {
+  justify-content: flex-end;      /*right align the navigation*/
+}
+
+nav ul a li {
+  display: inline;
+  padding-right: 25px;
+}
+
+/* FORM */
+
+.form-title, .form-contents {
+  width: 50%;                 /*aligns the title and form on the same line*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-title h3 {
+  width: 100%;
+}
+
+input[type=text] {
+  width: 50%;
+  margin-right: 5px;
+}
+
+input[type=button] {
+  width: 25%;
+  margin-top: 0;
+  padding: 10px;
+}
+
+
+/* SERVICES */
+
+.section-one, .section-two, .section-three {
+  width: 33%;               /*Lines up divs on same line in third widths*/
+  
+}
+
+.section-one p, .section-two p, .section-three p
+/*.section-one h3, .section-two h3, .section-three h3*/ {
+  width: 90%;
+}
+}
